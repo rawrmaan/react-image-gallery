@@ -19,7 +19,10 @@ const ImageGallery = React.createClass({
     slideInterval: React.PropTypes.number,
     onSlide: React.PropTypes.func,
     onClick: React.PropTypes.func,
-    startIndex: React.PropTypes.number
+    startIndex: React.PropTypes.number,
+    height: React.PropTypes.number,
+    imageScale: React.PropTypes.string,
+    backgroundColor: React.PropTypes.string
   },
 
   getDefaultProps() {

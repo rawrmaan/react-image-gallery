@@ -32,7 +32,10 @@ const ImageGallery = React.createClass({
       indexSeparator: ' / ',
       autoPlay: false,
       slideInterval: 4000,
-      startIndex: 0
+      startIndex: 0,
+      height: 700,
+      imageScale: 'contain',
+      backgroundColor: '#FFFFFF'
     };
   },
 
@@ -219,12 +222,6 @@ const ImageGallery = React.createClass({
     return alignment;
   },
 
-  _handleImageLoad(event) {
-    if (event.target.className.indexOf('loaded') === -1) {
-      event.target.className += ' loaded';
-    }
-  },
-
   render() {
     let currentIndex = this.state.currentIndex;
     let thumbnailStyle = {
@@ -244,13 +241,25 @@ const ImageGallery = React.createClass({
       let originalClass = item.originalClass ? ' ' + item.originalClass : '';
       let thumbnailClass = item.thumbnailClass ? ' ' + item.thumbnailClass : '';
 
+      let imageDivProps = {
+        className: "image",
+        style: {
+          backgroundColor: this.props.backgroundColor,
+          backgroundImage: `url(${item.original})`,
+          backgroundSize: this.props.imageScale,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          height: `${this.props.height}px`
+        }
+      }
+
       let slide = (
         <div
           key={index}
           className={'image-gallery-slide' + alignment + originalClass}
           onClick={this.props.onClick}
           onTouchStart={this.props.onClick}>
-            <img src={item.original} onLoad={this._handleImageLoad}/>
+            <div {...imageDivProps}></div>
             {item.description}
         </div>
       );

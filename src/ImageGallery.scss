@@ -1,6 +1,8 @@
 $ig-screen-sm-min: 768px;
 $ig-white: #fff;
 $ig-black: #222;
+$ig-grey: #666;
+$ig-teal: #058d86;
 $ig-blue: #337ab7;
 
 @mixin vendor-prefix($name, $value) {
@@ -24,7 +26,7 @@ $ig-blue: #337ab7;
     font-size: 6em;
     line-height: 0;
     position: absolute;
-    text-shadow: 0 2px 2px $ig-black;
+    text-shadow: 0 1px 3px $ig-grey;
     top: 48%;
     transition: all .2s ease-out;
     z-index: 2;
@@ -35,7 +37,7 @@ $ig-blue: #337ab7;
 
     @media (min-width: $ig-screen-sm-min) {
       &:hover {
-        color: $ig-blue;
+        color: $ig-teal;
       }
     }
   }
@@ -178,9 +180,9 @@ $ig-blue: #337ab7;
 
   &.active {
     img {
-      border: 4px solid $ig-blue;
+      border: 4px solid $ig-teal;
       @media (max-width: $ig-screen-sm-min) {
-        border: 3px solid $ig-blue;
+        border: 3px solid $ig-teal;
       }
     }
   }

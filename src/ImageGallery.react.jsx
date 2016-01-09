@@ -20,7 +20,7 @@ const ImageGallery = React.createClass({
     onSlide: React.PropTypes.func,
     onClick: React.PropTypes.func,
     startIndex: React.PropTypes.number,
-    height: React.PropTypes.number,
+    height: React.PropTypes.string,
     imageScale: React.PropTypes.string,
     backgroundColor: React.PropTypes.string
   },
@@ -36,7 +36,7 @@ const ImageGallery = React.createClass({
       autoPlay: false,
       slideInterval: 4000,
       startIndex: 0,
-      height: 700,
+      height: "700px",
       imageScale: 'contain',
       backgroundColor: '#FFFFFF'
     };
@@ -252,7 +252,7 @@ const ImageGallery = React.createClass({
           backgroundSize: this.props.imageScale,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          height: `${this.props.height}px`
+          height: this.props.height
         }
       }
 

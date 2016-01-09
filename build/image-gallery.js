@@ -31,7 +31,7 @@ var ImageGallery = _react2['default'].createClass({
     onSlide: _react2['default'].PropTypes.func,
     onClick: _react2['default'].PropTypes.func,
     startIndex: _react2['default'].PropTypes.number,
-    height: _react2['default'].PropTypes.number,
+    height: _react2['default'].PropTypes.string,
     imageScale: _react2['default'].PropTypes.string,
     backgroundColor: _react2['default'].PropTypes.string
   },
@@ -47,7 +47,7 @@ var ImageGallery = _react2['default'].createClass({
       autoPlay: false,
       slideInterval: 4000,
       startIndex: 0,
-      height: 700,
+      height: "700px",
       imageScale: 'contain',
       backgroundColor: '#FFFFFF'
     };
@@ -259,7 +259,7 @@ var ImageGallery = _react2['default'].createClass({
           backgroundSize: _this2.props.imageScale,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          height: _this2.props.height + 'px'
+          height: _this2.props.height
         }
       };
 

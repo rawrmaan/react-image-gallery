@@ -125,6 +125,14 @@ const ImageGallery = React.createClass({
     }
   },
 
+  slideToNext() {
+    this.slideToIndex(this.state.currentIndex + 1, true)
+  },
+
+  slideToPrevious() {
+    this.slideToIndex(this.state.currentIndex - 1, true)
+  },
+
   slideToIndex(index, event) {
     let slideCount = this.props.items.length - 1;
 
@@ -244,6 +252,8 @@ const ImageGallery = React.createClass({
       let originalClass = item.originalClass ? ' ' + item.originalClass : '';
       let thumbnailClass = item.thumbnailClass ? ' ' + item.thumbnailClass : '';
 
+      let slideStyle = {height: this.props.height};
+
       let imageDivProps = {
         className: "image",
         style: {
@@ -259,6 +269,7 @@ const ImageGallery = React.createClass({
       let slide = (
         <div
           key={index}
+          style={slideStyle}
           className={'image-gallery-slide' + alignment + originalClass}
           onClick={this.props.onClick}
           onTouchStart={this.props.onClick}>

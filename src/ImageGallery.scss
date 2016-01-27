@@ -26,7 +26,6 @@ $ig-blue: #337ab7;
     font-size: 6em;
     height: 100%;
     line-height: 0;
-    padding-top: 30%;
     position: absolute;
     text-shadow: 0 1px 3px $ig-grey;
     transition: all .2s ease-out;
@@ -49,6 +48,8 @@ $ig-blue: #337ab7;
     &:before {
       content: '‹';
       padding: 50px 15px;
+      position: relative;
+      top: 48%;
     }
   }
 
@@ -58,6 +59,8 @@ $ig-blue: #337ab7;
     &:before {
       content: '›';
       padding: 50px 15px;
+      position: relative;
+      top: 48%;
     }
   }
 

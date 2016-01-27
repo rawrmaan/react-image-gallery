@@ -15,7 +15,6 @@
     font-size: 6em;
     height: 100%;
     line-height: 0;
-    padding-top: 30%;
     position: absolute;
     text-shadow: 0 1px 3px #666;
     transition: all .2s ease-out;
@@ -30,12 +29,16 @@
     left: 0; }
     .image-gallery-content .image-gallery-left-nav:before {
       content: '‹';
-      padding: 50px 15px; }
+      padding: 50px 15px;
+      position: relative;
+      top: 48%; }
   .image-gallery-content .image-gallery-right-nav {
     right: 0; }
     .image-gallery-content .image-gallery-right-nav:before {
       content: '›';
-      padding: 50px 15px; }
+      padding: 50px 15px;
+      position: relative;
+      top: 48%; }
 
 .image-gallery-slides {
   line-height: 0;

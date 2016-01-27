@@ -17,6 +17,7 @@ $ig-blue: #337ab7;
 
 .image-gallery-content {
   position: relative;
+  overflow: hidden;
 
   .image-gallery-left-nav,
   .image-gallery-right-nav {

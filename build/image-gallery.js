@@ -129,11 +129,11 @@ var ImageGallery = _react2['default'].createClass({
   },
 
   slideToNext: function slideToNext() {
-    this.slideToIndex(this.state.currentIndex + 1, true);
+    this.slideToIndex(this.state.currentIndex + 1);
   },
 
   slideToPrevious: function slideToPrevious() {
-    this.slideToIndex(this.state.currentIndex - 1, true);
+    this.slideToIndex(this.state.currentIndex - 1);
   },
 
   slideToIndex: function slideToIndex(index, event) {

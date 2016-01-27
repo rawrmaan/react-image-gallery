@@ -7,7 +7,8 @@
   user-select: none; }
 
 .image-gallery-content {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .image-gallery-content .image-gallery-left-nav, .image-gallery-content .image-gallery-right-nav {
     color: #fff;
     cursor: pointer;

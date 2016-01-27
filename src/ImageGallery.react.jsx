@@ -126,11 +126,11 @@ const ImageGallery = React.createClass({
   },
 
   slideToNext() {
-    this.slideToIndex(this.state.currentIndex + 1, true)
+    this.slideToIndex(this.state.currentIndex + 1)
   },
 
   slideToPrevious() {
-    this.slideToIndex(this.state.currentIndex - 1, true)
+    this.slideToIndex(this.state.currentIndex - 1)
   },
 
   slideToIndex(index, event) {
